@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-14T00:00:00+07:00",
+  "title": "Design System: Mitudom Kindergarten",
+  "extensions": {
+    "colorMeta": {
+      "deep-trust-navy": { "role": "primary", "displayName": "Deep Trust Navy", "canonical": "#062B57", "tonalRamp": ["#03152B", "#062B57", "#154677", "#37658F", "#6689AA", "#9AB0C5", "#CFDBE5", "#F2F6F9"] },
+      "lotus-blue": { "role": "primary", "displayName": "Lotus Blue", "canonical": "#087FE5", "tonalRamp": ["#03213D", "#063F73", "#075EAA", "#087FE5", "#4AA3EF", "#88C6F6", "#C5E5FB", "#EEF8FF"] },
+      "gentle-sky": { "role": "neutral", "displayName": "Gentle Sky", "canonical": "#E8F4FF", "tonalRamp": ["#17222C", "#344655", "#587183", "#819CAB", "#AAC3D1", "#CDE0EA", "#E8F4FF", "#F7FBFF"] },
+      "caring-pink": { "role": "secondary", "displayName": "Caring Pink", "canonical": "#D95B88", "tonalRamp": ["#351721", "#66293D", "#963E5C", "#C65379", "#D95B88", "#E68BAD", "#F1BED0", "#FBEAF0"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero heading only." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings." },
+      "body": { "displayName": "Body", "purpose": "Thai and English long-form reading." }
+    },
+    "shadows": [
+      { "name": "overlay-panel", "value": "-8px 0 20px rgb(6 43 87 / 0.12)", "purpose": "Mobile navigation panel only." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Buttons, links, and mobile menu state changes." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "48rem" },
+      { "name": "desktop-nav", "value": "70rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary contact and navigation action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">ติดต่อสอบถาม</a>",
+      "css": ".ds-btn-primary{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:12px 22px;border:2px solid #087FE5;border-radius:8px;background:#087FE5;color:#fff;font-family:Anuphan,sans-serif;font-weight:700;text-decoration:none;transition:background 180ms cubic-bezier(.22,1,.36,1),transform 180ms cubic-bezier(.22,1,.36,1)}.ds-btn-primary:hover{background:#0769C3;border-color:#0769C3;transform:translateY(-2px)}.ds-btn-primary:focus-visible{outline:3px solid #FFBF47;outline-offset:3px}"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "description": "Secondary path to a detailed section or page.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">รู้จักโรงเรียน <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-text-link{display:inline-flex;gap:8px;align-items:center;color:#0769C3;font-family:Anuphan,sans-serif;font-weight:700;text-decoration:none}.ds-text-link span{transition:transform 180ms cubic-bezier(.22,1,.36,1)}.ds-text-link:hover span{transform:translateX(5px)}.ds-text-link:focus-visible{outline:3px solid #FFBF47;outline-offset:3px}"
+    },
+    {
+      "name": "Image Placeholder",
+      "kind": "custom",
+      "refersTo": "image-placeholder",
+      "description": "Temporary slot that documents the required real school image.",
+      "html": "<div class=\"ds-image-placeholder\"><strong>ภาพ Hero ของโรงเรียน</strong><small>แนะนำภาพแนวนอน 4:3 ของพื้นที่เรียนรู้จริง</small></div>",
+      "css": ".ds-image-placeholder{display:grid;min-height:240px;place-content:center;gap:4px;padding:32px;border:1px solid #C9DCEB;border-radius:14px;background:#E8F4FF;color:#0769C3;font-family:Anuphan,sans-serif;text-align:center}.ds-image-placeholder strong{color:#062B57}.ds-image-placeholder small{color:#4D6476}"
+    },
+    {
+      "name": "Program Item",
+      "kind": "custom",
+      "description": "A class level and verified starting age.",
+      "html": "<div class=\"ds-program\"><span>01</span><strong>เนอร์เซอรี่</strong><small>1 ปี 6 เดือนขึ้นไป</small></div>",
+      "css": ".ds-program{display:grid;grid-template-columns:40px 1fr auto;gap:16px;align-items:center;padding:16px 0;border-block:1px solid #C9DCEB;font-family:Anuphan,sans-serif}.ds-program span{color:#A93460;font-size:13px;font-weight:700}.ds-program strong{color:#062B57}.ds-program small{color:#4D6476}"
+    },
+    {
+      "name": "Mobile Menu Button",
+      "kind": "button",
+      "description": "44px navigation trigger with visible focus.",
+      "html": "<button class=\"ds-menu\" aria-label=\"เปิดเมนูหลัก\"><span></span><span></span><span></span></button>",
+      "css": ".ds-menu{display:grid;width:44px;height:44px;place-content:center;gap:4px;border:0;border-radius:8px;background:#E8F4FF;color:#062B57}.ds-menu span{width:20px;height:2px;background:currentColor}.ds-menu:focus-visible{outline:3px solid #FFBF47;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Caring Teacher’s Welcome — การต้อนรับอย่างใส่ใจจากคุณครู",
+    "overview": "หน้าเว็บรู้สึกเหมือนคุณครูกำลังพาผู้ปกครองทำความรู้จักโรงเรียนผ่านภาพถ่ายจริงและคำอธิบายที่ชัดเจน โครงสร้างโปร่ง สงบ และอ่านง่าย แต่มีลำดับที่มั่นคงพอจะสะท้อนความเชี่ยวชาญด้านเด็กปฐมวัย",
+    "keyCharacteristics": ["อบอุ่นโดยไม่ดูเด็กเกินไป", "เชี่ยวชาญโดยไม่เคร่งขรึม", "ภาพจริงนำ ข้อมูลจริงสนับสนุน", "เนื้อหาสั้นและอ่านง่ายบนมือถือ", "ใช้โลโก้หนึ่งครั้งใน header"],
+    "rules": [
+      { "name": "The Calm Full-Palette Rule", "body": "ทุกสีต้องมีหน้าที่ ห้ามใช้ทุกสีแข่งขันกันในบริเวณเดียว", "section": "colors" },
+      { "name": "The One Friendly Voice Rule", "body": "ใช้ Anuphan เพียงครอบครัวเดียว", "section": "typography" },
+      { "name": "The Flat-by-Default Rule", "body": "ใช้สี พื้นที่ว่าง และเส้นแบ่งสร้างลำดับก่อนใช้เงา", "section": "elevation" }
+    ],
+    "dos": ["Do ใช้ภาพจริงที่ได้รับอนุญาต", "Do รักษาพื้นที่กดอย่างน้อย 44×44px", "Do ใช้ placeholder จนกว่าจะมีภาพจริง"],
+    "donts": ["Don't ใช้ภาพลักษณ์ที่เป็นการ์ตูน", "Don't ใช้โลโก้ซ้ำ", "Don't สร้างข่าวหรือกิจกรรมล่าสุด", "Don't ใช้ carousel หรือวิดีโอพื้นหลัง"]
+  }
+}
